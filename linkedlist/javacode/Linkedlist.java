@@ -32,6 +32,7 @@ class Linkedlist {
 		Node newNode = new Node(val);
 		if (head == null) {
 			head = newNode;
+			return;
 		}
 		for (Node temp = head; temp != null; temp = temp.next) {
 			if (temp.next == null) {

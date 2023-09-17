@@ -3,7 +3,29 @@ package javacode;
 class MainClass {
 	public static void main(String args[]) {
 		MainClass mainClass = new MainClass();
-		mainClass.basicOpsTest();
+		// mainClass.basicOpsTest();
+		mainClass.loopTest();
+	}
+
+	public void loopTest() {
+		LinkedlistLoops ll = new LinkedlistLoops();
+		// Middle Element
+		for (int i = 1; i <= 6; i++) {
+			ll.insertLast(i);
+		}
+		ll.printlist();
+		ll.size();
+		ll.middleElem();
+
+		// Create Cycle
+		ll.createCycle(2);
+
+		// Loop Detection
+		ll.detectLoop();
+		// Loop Starting Point Detection
+		ll.loopStart();
+		// Loop length
+		ll.loopLength();
 	}
 
 	public void basicOpsTest() {
