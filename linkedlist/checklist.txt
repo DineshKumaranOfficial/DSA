@@ -1,0 +1,31 @@
+1. Linkedlist Concept
+2. Linkedlist Types
+3. Linkedlist Operations
+    a. Insert
+        > First
+        > Last
+        > Index
+    b. Delete
+        > First
+        > Last
+        > Index
+    c. Search
+    d. Size or length of linkedlist
+    e. Print elements
+4. Slow and Fast Pointer Topics
+    a. Middle of linkedlist - Using Tortoise Hare Approach
+    b. Detect Loop in Linkedlist - Using slow and fast pointer
+    c. Find Starting point of loop - Using Floyd's Algorithm(Using Slow and Fast pointers with another entry pointer)
+    d. Find the length of the loop - Using Floyd's Algorithm
+5. Todo
+    a. Reverse a Linkedlist(Iterative and Recursive)
+    b. Palindrome or not
+    c. Nth node from back of the list
+    d. Intersection Point of two list
+    e. Add two numbers
+6. Todo Problems without notes
+    a. Seggregate odd and even numbers in LL
+    b. Delete the middle node
+    c. Sort LL
+    d. Sort 0s 1s 2s
+    e. Add 1 to a number represented by LL

@@ -1,0 +1,5 @@
+package javacode;
+
+class LinkedlistLoops {
+
+}

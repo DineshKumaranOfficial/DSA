@@ -1,0 +1,19 @@
+Types:
+    1. Singly Linked List
+    2. Doubly Linked List
+    3. Circular Linked List
+
+Structure:
+    1. Singly Linkedlist
+        value
+        node
+    2. Doubly Linkedlist
+        node
+        value
+        node
+
+Terms:
+    1. First node is called head
+    2. Last node is called tail
+    3. Linkedlist traversal always starts from head
+    4. In Circular Linkedlist last node should point to first node in singly and both sides in doubly
