@@ -4,17 +4,52 @@ class MainClass {
 	public static void main(String args[]) {
 		MainClass mainClass = new MainClass();
 		// mainClass.basicOpsTest();
-		mainClass.loopTest();
+		// mainClass.loopTest();
+		mainClass.interOpsTest();
+	}
+
+	public void interOpsTest() {
+		LinkedlistInterOps ll = new LinkedlistInterOps();
+		for (int i = 1; i < 6; i++) {
+			ll.insertLast(i);
+		}
+		ll.printlist();
+		ll.size();
+
+		// Reverse list
+		ll.reverse();
+		ll.printlist();
+		ll.size();
+
+		// Palindrome
+		for (int i = 2; i <= 5; i++) {
+			ll.insertLast(i);
+		}
+		ll.printlist();
+		ll.size();
+		ll.isPalindrome();
+
+		// Delete Nth Node from back of the list
+		for (int i = 1; i <= 5; i++) {
+			ll.insertLast(i);
+		}
+		System.out.println("before delete");
+		ll.printlist();
+		ll.removeNthNodeFromBack(5);
+		System.out.println("after delete");
+		ll.printlist();
+		ll.size();
 	}
 
 	public void loopTest() {
 		LinkedlistLoops ll = new LinkedlistLoops();
-		// Middle Element
 		for (int i = 1; i <= 6; i++) {
 			ll.insertLast(i);
 		}
 		ll.printlist();
 		ll.size();
+
+		// Middle Element
 		ll.middleElem();
 
 		// Create Cycle

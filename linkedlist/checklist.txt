@@ -14,16 +14,17 @@
     e. Print elements
 4. Slow and Fast Pointer Topics
     a. Middle of linkedlist - Using Tortoise Hare Approach
-    b. Detect Loop in Linkedlist - Using slow and fast pointer
+    b. Detect Loop in Linkedlist - Using slow and fast pointer which is called as Floyd's algorithm
     c. Find Starting point of loop - Using Floyd's Algorithm(Using Slow and Fast pointers with another entry pointer)
     d. Find the length of the loop - Using Floyd's Algorithm
-5. Todo
+5. Intermediate Operations
     a. Reverse a Linkedlist(Iterative and Recursive)
     b. Palindrome or not
     c. Nth node from back of the list
-    d. Intersection Point of two list
-    e. Add two numbers
-6. Todo Problems without notes
+6. Todo
+    a. Intersection Point of two list
+    b. Add two numbers
+7. Todo Problems without notes
     a. Seggregate odd and even numbers in LL
     b. Delete the middle node
     c. Sort LL
