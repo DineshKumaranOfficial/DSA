@@ -18,7 +18,7 @@
     c. Find Starting point of loop - Using Floyd's Algorithm(Using Slow and Fast pointers with another entry pointer)
     d. Find the length of the loop - Using Floyd's Algorithm
 5. Intermediate Operations
-    a. Reverse a Linkedlist(Iterative and Recursive)
+    a. Reverse a Linkedlist(Iterative and TODO Recursive)
     b. Palindrome or not
     c. Nth node from back of the list
 6. Todo
