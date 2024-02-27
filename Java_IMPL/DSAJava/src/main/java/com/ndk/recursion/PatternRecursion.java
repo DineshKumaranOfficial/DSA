@@ -1,6 +1,7 @@
 package com.ndk.recursion;
 
 import java.util.ArrayList;
+import com.ndk.utils.Utils;
 
 public class PatternRecursion {
     // Program to get the nth fibonaaci number. Time Complexity is 2^n
@@ -68,5 +69,80 @@ public class PatternRecursion {
             rightResult = printOneSubSeqWithSumK(arr, k, subSeq, idx + 1, sum);
         }
         return leftResult || rightResult;
+    }
+
+    // Print All Combinations of the array whose sum is equal to K. Each element can be taken
+    // multiple times
+    void printAllCombWithSumK(int[] arr, int k, ArrayList<Integer> combination, int idx) {
+        if (k == 0) {
+            System.out.println(combination.toString());
+            return;
+        }
+        if (idx >= arr.length) {
+            return;
+        }
+        if (arr[idx] > k)
+            return;
+        combination.add(arr[idx]);
+        printAllCombWithSumK(arr, k - arr[idx], combination, idx);
+        combination.remove(combination.size() - 1);
+        printAllCombWithSumK(arr, k, combination, idx + 1);
+    }
+
+    // Print all unique combinations of the array whose sum is equal to K. Each element can be taken
+    // only once. Output should be in lexigraphic ascending order. Before calling this recursion
+    // method make sure the input array is sorted
+    void printAllUniqueCombWithSumK(int arr[], int k, ArrayList<Integer> combination, int idx) {
+        if (k == 0) {
+            System.out.println(combination.toString());
+            return;
+        }
+        for (int i = idx; i < arr.length; i++) {
+            if (i > idx && arr[i] == arr[i - 1])
+                continue;
+            if (arr[i] > k)
+                break;
+            combination.add(arr[i]);
+            printAllUniqueCombWithSumK(arr, k - arr[i], combination, i + 1);
+            combination.remove(combination.size() - 1);
+        }
+    }
+
+    // Print all subset sum of an array
+    // Subset is same as subsequence
+    void findAllSubsetSum(int[] arr, int idx, int sum, ArrayList<Integer> result) {
+        if (idx >= arr.length) {
+            result.add(sum);
+            return;
+        }
+        findAllSubsetSum(arr, idx + 1, sum + arr[idx], result);
+        findAllSubsetSum(arr, idx + 1, sum, result);
+    }
+
+    // Print all unique subset of an array
+    void findAllUniqueSubset(int[] arr, int idx, ArrayList<Integer> subset,
+            ArrayList<ArrayList<Integer>> result) {
+        result.add(new ArrayList<>(subset));
+        for (int i = idx; i < arr.length; i++) {
+            if (i > idx && arr[i] == arr[i - 1])
+                continue;
+            subset.add(arr[i]);
+            findAllUniqueSubset(arr, i + 1, subset, result);
+            subset.remove(subset.size() - 1);
+        }
+    }
+
+    // Print all permutations of an array
+    // Permutation is the rearranging of elements in possible combinations in an array
+    void printAllPermutations(int[] arr, int idx) {
+        Utils utils = new Utils();
+        if (idx >= arr.length) {
+            utils.printArr(arr);
+        }
+        for (int i = idx; i < arr.length; i++) {
+            utils.swap(arr, idx, i);
+            printAllPermutations(arr, idx + 1);
+            utils.swap(arr, idx, i);
+        }
     }
 }
